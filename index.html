@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap" rel="stylesheet">
+    <title>Felicitats!</title>
+</head>
+<body>
+    <h1>Felicitats!!!</h1>
+    <div class="container">
+        <div class="clue-container">
+            <a id="anchor" href="#" onclick="displayVideo()">Si admites que eres vieja, pulsa aquí</a>
+            <div id="pista1" class="pista1">
+                <video id="video" width="400" height="300" controls autoplay>
+                    <source src="video.mp4" type="video/mp4">
+                </video>
+                <input id="inputPista1" type="text" placeholder="introduce la contraseña">
+                <div class="error-message" id="errorMessage">sabes escribir?</div>
+                <input type="submit" onclick="validatePista1()">
+            </div>
+        </div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
