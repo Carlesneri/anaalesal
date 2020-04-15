@@ -4,6 +4,8 @@
     box-sizing: border-box;
     /* font-family: 'Permanent Marker', cursive; */
     font-family: 'Merienda', cursive;
+    text-shadow: 5px 5px 10px rgb(63, 63, 63);
+
 
 }   
 a{
@@ -19,16 +21,16 @@ a{
     width: 100%;
     /* height: 200px; */
     text-align: center;
-    font-size: 2em;
-    animation: jump 3s infinite;
+    animation-name: jump;
+    animation-duration: 3s;
 }
 
 @keyframes jump{
     0% {
-        font-size: 1em;
+        font-size: 0em;
     }
     50% {
-        font-size: 2em;
+        font-size: 1.2em;
     }
     100% {
         font-size: 1em;
@@ -73,7 +75,6 @@ h1{
     width: 100%;
     font-size: 3.5em;
     text-align: center;
-    text-shadow: 5px 5px 10px rgb(94, 94, 94);
 }
 input, video{
     box-shadow: 5px 5px 10px rgb(94, 94, 94);

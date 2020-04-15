@@ -10,7 +10,7 @@ function displayVideo(){
 function validatePista1(){
     let pista1Element = document.getElementById("pista1")
     let inputPista1Element = document.getElementById("inputPista1")
-    if(inputPista1Element.value.toLowerCase() !== 'te'){
+    if(inputPista1Element.value.toLowerCase().trim() !== 'te'){
         const errorMessageElement = document.getElementById("errorMessage1")
         errorMessageElement.classList.add("show")
         inputPista1Element.value = ''
@@ -30,7 +30,7 @@ function validatePista2(){
     let pista2Element = document.getElementById("pista1")
 
     let inputPista2Element = document.getElementById("inputPista2")
-    if(inputPista2Element.value.toLowerCase() !== 'queremos'){
+    if(inputPista2Element.value.toLowerCase().trim() !== 'queremos'){
         const errorMessageElement = document.getElementById("errorMessage2")
         errorMessageElement.classList.add("show")
         inputPista2Element.value = ''
@@ -52,13 +52,14 @@ function validatePista2(){
 function validatePista3(){
     let pista3Element = document.getElementById("pista1")
     let inputPista3Element = document.getElementById("inputPista3")
-    if(inputPista3Element.value.toLowerCase() !== 'muchisimo'){
+    if(inputPista3Element.value.toLowerCase().trim() !== 'muchisimo'){
         const errorMessageElement = document.getElementById("errorMessage3")
         errorMessageElement.classList.add("show")
         inputPista3Element.value = ''
     }else{
         const resolvedElement = document.getElementById("resolved")
         resolvedElement.innerHTML += "<h2>Lo Lograste</h2>"
+        resolvedElement.classList.add('resolved')
         let pistasElements = document.querySelectorAll('.pista')
         pistasElements.forEach(el => {
             el.classList.remove('show')
