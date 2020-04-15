@@ -2,50 +2,145 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Permanent Marker', cursive;
+    /* font-family: 'Permanent Marker', cursive; */
+    font-family: 'Merienda', cursive;
+
 }   
 a{
     text-decoration: none;
     color: white;
 } 
+#anchor{
+    font-size: 1.5em;
+}
+.resolved{
+    /* position: absolute; */
+    color: greenyellow;
+    width: 100%;
+    /* height: 200px; */
+    text-align: center;
+    font-size: 2em;
+    animation: jump 3s infinite;
+}
+
+@keyframes jump{
+    0% {
+        font-size: 1em;
+    }
+    50% {
+        font-size: 2em;
+    }
+    100% {
+        font-size: 1em;
+    }
+
+}
+
 input{
     padding: 1em;
     margin: 0.5em;
     border-radius: 5px;
+    border: 0;
+    outline: none;
 }
 body{
+    background: #4568DC;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to top, #B06AB3, #4568DC);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to top, #B06AB3, #4568DC); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    min-height: 100vh;
+    color: white;
+    padding-bottom: 2em;
+}
+header{
+    background-image: url('guirnalda.png');
+    background-size: contain;
+    background-position-y: 200px;
+    background-position-x: -10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+    width: 100%;
+}
+header img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    border: 5px solid white;
+}
+h1{
+    margin: 0 10px;
+    width: 100%;
+    font-size: 3.5em;
+    text-align: center;
+    text-shadow: 5px 5px 10px rgb(94, 94, 94);
+}
+input, video{
+    box-shadow: 5px 5px 10px rgb(94, 94, 94);
+}
+video{
+    box-sizing: initial;
+    padding: 0;
+    margin-bottom: 1em;
+    outline: none;
+    border: 4px solid white;
+    border-radius: 10px;
+}
+.title{
+    position: relative;
+}
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+
+}
+.clue-container{
+    width: 100%;
+    margin-top: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 100vh;
-    background-color: cadetblue;
-    color: white;
-}
-h1{
-    font-size: 5em;
-}
-.container{
+    justify-content: center;
     position: relative;
-    width: 100%;
-    min-height: 500px;
-    background-image: url('./IMG_2297.JPG');    
-    background-size: cover;    
-    background-repeat: no-repeat;
-}
-.clue-container{
-    position: absolute;
-    top: 25px;
-    right: 25px;
-}
-.pista1{
-    display: none;
+    padding: 1em;
 }
 .error-message{
-    display: none;
     color: red;
 }
-.show{
+.pista{
+    position: absolute;
     display: flex;
     text-align: center;
     flex-direction: column;
+    transition: all .4s ease-out;
+}
+.hide{
+    transform: scale(0);
+}
+.show{
+    transform: scale(1);
+}
+.balloons{
+    position: absolute;
+    width: 100%;
+    transform: translateY(-50px);
+    display: flex;
+    justify-content: center;
+}
+.balloons img{
+    width: 50%;
+    overflow: hidden;
+}
+
+
+@media (max-width: 500px){
+    header{
+        flex-direction: column;
+    }
+    video{
+        width: 100%;
+    }
 }
